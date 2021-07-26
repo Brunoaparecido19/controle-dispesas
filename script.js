@@ -1,3 +1,5 @@
+const $html = document.querySelector("html")
+const $checkbox = document.querySelector("#switch")
 const transactionUl = document.querySelector("#transactions");
 const incomedisplay = document.querySelector("#money-plus");
 const expenseDisplay = document.querySelector("#money-minus");
@@ -6,6 +8,9 @@ const form = document.querySelector("#form");
 const inputTransactionName = document.querySelector("#text");
 const inputTransactionAmount = document.querySelector("#amount");
 
+$checkbox.addEventListener("change", function () {
+    $html.classList.toggle("dark-mode")
+})
 
 const localStorageTransactions = JSON.parse(localStorage
     .getItem("transactions"));

@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.24);
+  --body-bg: #f7f7f7;
+  --text-color: #000000;
+  --btn-color: #9c88ff;
+  --h1-color:#2e75cc;
+  
+}
+
+.dark-mode:root{
+  --body-bg: #212529;
+  --text-color: #f7f7f7;
+  --btn-color: #3e3083;
+  --h1-color:#00bbff;
 }
 
 * {
@@ -9,7 +21,7 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color:var(--body-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,32 +31,44 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+img {
+  width: 4rem;
+  display: flex;
+  transform:translate(-20px, 40px);
+}
+
 .container {
   margin: 30px auto;
   width: 350px;
-  background-color: #f7f7f7;
-
 }
 
-h1 {
+.balance {
   letter-spacing: 1px;
   margin: 0;
-  color: #2e75cc;
+  color: var(--h1-color);
+}
+h1 {
+  color: var(--text-color);
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
 }
 
 h3 {
   border-bottom: 1px solid #bbb;
   padding-bottom: 10px;
   margin: 40px 0 10px;
+  color: var(--text-color);
 }
 
 h4 {
   margin: 0;
   text-transform: uppercase;
+  color: var(--text-color);
 }
 
 .inc-exp-container {
-  background-color: #fff;
+  background-color: var(--bg-color);
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -68,16 +92,17 @@ h4 {
 }
 
 .money.plus {
-  color: #0ac056;
+  color: #00f200;
 }
 
 .money.minus {
-  color: #c0392b;
+  color: #ff1d04;
 }
 
 label {
   display: inline-block;
   margin: 10px 0;
+  color: var(--text-color);
 }
 
 input[type='text'],
@@ -92,7 +117,7 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: var(--btn-color);
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -126,16 +151,20 @@ input[type='number'] {
 }
 
 .transactions li.plus {
-  border-right: 5px solid #2ecc71;
+  border-right: 5px solid #00f200;
+  background-color: var(--body-bg);
+  color: var(--text-color);
 }
 
 .transactions li.minus {
-  border-right: 5px solid #c0392b;
+  border-right: 5px solid #ff1d04;
+  background-color: var(--body-bg);
+  color: var(--text-color);
 }
 
 .delete-btn {
   cursor: pointer;
-  background-color: #e74c3c;
+  background-color: #ff1d04;
   border: 0;
   color: #fff;
   font-size: 20px;
