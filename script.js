@@ -1,5 +1,5 @@
 const $html = document.querySelector("html")
-const $checkbox = document.querySelector("#switch")
+const $checkbox = document.querySelector("#swicth")
 const transactionUl = document.querySelector("#transactions");
 const incomedisplay = document.querySelector("#money-plus");
 const expenseDisplay = document.querySelector("#money-minus");
